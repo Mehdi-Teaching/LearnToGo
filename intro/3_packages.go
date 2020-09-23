@@ -13,7 +13,7 @@ package main
 */
 
 import (
-	"Playground/crash/strutil"
+	"Playground/intro/strutil"
 	"fmt"
 	"math"
 )
