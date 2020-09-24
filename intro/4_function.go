@@ -32,8 +32,13 @@ func divMod(x, y int) (int, int) {
 // method return value and an error type
 func contentOfUrl(url string) (string, error) {
 	resp, err := http.Get(url)
+	if err != nil {
+		return "", err
+	}
 
-	return resp.Header.Get("Content-Length"), err
+	defer resp.Body.Close()
+
+	return resp.Header.Get("Content-Type"), err
 }
 
 func main() {
