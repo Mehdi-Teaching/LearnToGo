@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"net/http"
+)
 
 /*
 	define function using <func> keyword
@@ -21,8 +24,22 @@ func multiply(x, y int) int {
 	return x * y
 }
 
+// method with 2 return value
+func divMod(x, y int) (int, int) {
+	return x / y, x % y
+}
+
+// method return value and an error type
+func contentOfUrl(url string) (string, error) {
+	resp, err := http.Get(url)
+
+	return resp.Header.Get("Content-Length"), err
+}
+
 func main() {
 	fmt.Println(greeting("Reader"))
 	fmt.Println(summation(2, 65))
 	fmt.Println(multiply(2, 5))
+	fmt.Println(divMod(8, 3))
+	fmt.Println(contentOfUrl("http://golang.org"))
 }
