@@ -34,6 +34,9 @@ func main() {
 	// function defined in line 50
 	person1.changeLastName("Green")
 	fmt.Println(person1)
+
+	// for a better perception of struct
+	fmt.Printf("%+v\n", person1)
 }
 
 // Greeting method for Person Struct
