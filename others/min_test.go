@@ -10,7 +10,7 @@ import (
 	1. File name must end with [_test]. in this case min_test.go
 	2. Test functions must start with [Test]. for example TestMinValue
 	3. Test functions must have [t *testing.T] as parameter.
-	4. run tests using command [go test [DIR-ADDRESS]]
+	4. run tests using command [go test [PACKAGE]]
 */
 
 // use a struct to simplify testing
